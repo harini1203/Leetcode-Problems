@@ -1,0 +1,51 @@
+Solution (Java) :
+ 
+ class Solution {
+    public boolean isPalindrome(int x) {
+        int original = x;
+        int remainder,reverse=0;
+        boolean flag;
+        if(x<0){
+            flag = false;
+        }
+        else{
+        while(x!=0){
+            remainder = x%10;
+            reverse = reverse * 10 + remainder;
+            x /= 10;
+        }
+        if(reverse == original){
+            flag = true;
+        }
+        else{
+            flag = false;
+        }
+        }
+        return flag;
+    }
+}
+
+Solution (C) :
+
+bool isPalindrome(int x){
+    int original = x;
+    double remainder,reverse=0;
+    bool flag;
+    if(x<0){
+        flag = false;
+    }
+    else{
+    while(x!=0){
+        remainder = x % 10;
+        reverse = reverse * 10 + remainder;
+        x/=10;
+    }
+    if(reverse == original){
+        flag = true;
+    }
+    else{
+        flag = false;
+    }
+}
+return flag;
+    }
